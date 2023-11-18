@@ -27,6 +27,28 @@
   <link rel="stylesheet" href="js/summernote/summernote-bs4.min.css">
 </head>
 <style>
+  @font-face {
+    font-family: "calibriBold";
+    src: url("./fonts/CalibriBold.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "calibriRegular";
+    src: url("./fonts/CalibriRegular.ttf") format("truetype");
+  }
+  .calibriBold{
+    font-family: 'calibriBold', Arial, Helvetica, sans-serif;
+  }
+  .slide5{
+    height: 42px;
+  }
+  .active{
+    border-bottom: 4px solid #ffb900;
+  }
+  .slide5 a{
+    line-height: 42px;
+    padding: 8px 20px;
+    font-family: 'calibriRegular', Arial, Helvetica, sans-serif;
+  }
   .r_purple{
     background-color: #442460 !important;
   }
@@ -50,6 +72,14 @@
     position: absolute;
     transition: all .1s linear;
     top: 15px;
+  }
+  @media only screen and (max-width: 940px) {
+    .r_tabpanel > div{
+      width: 1200px;
+    }
+    .r_tabpanel{
+      overflow-x: scroll;
+    }
   }
 </style>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -381,12 +411,82 @@
       <div class="container-fluid">
         <div class="row m-0">
           <div class="col-6 p-0">
-            <h3 class="">User Experience Mapping</h3>
-          </div>
-          <div class="col-6 p-0">
-            <button class="r_purple text-white float-right btn" data-toggle="modal" data-target="#exampleModal">Create new project</button>
+            <h3 class="calibriBold">User Experience Mapping - Project ABC</h3>
           </div>
         </div>
+        <div class="row m-0">
+          <div class="col-12 p-0">
+            <div class="r_tabpanel">
+              <div class="r_tabpanel_child">
+                <ul class="nav nav-tabs slide5 bg-white r_tabpanel">
+                  <li><a data-toggle="tab" href="#projects">Projects</a></li>
+                  <li><a class="active" data-toggle="tab" href="#projects_details">Projects details</a></li>
+                  <li><a data-toggle="tab" href="#setup">Setup</a></li>
+                  <li><a data-toggle="tab" href="#share">Share</a></li>
+                  <li><a data-toggle="tab" href="#fieldwork_status">Fieldwork status</a></li>
+                  <li><a data-toggle="tab" href="#process">Process</a></li>
+                  <li><a data-toggle="tab" href="#report">Report</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="tab-content">
+              <div id="projects_details" class="tab-pane fade in active">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="setup" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Some content in menu 1.</p>
+              </div>
+              <div id="share" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+              <div id="fieldwork_status" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Some content in menu 3.</p>
+              </div>
+              <div id="process" class="tab-pane fade">
+                <h3>Menu 4</h3>
+                <p>Some content in menu 4.</p>
+              </div>
+              <div id="report" class="tab-pane fade">
+                <h3>Menu 5</h3>
+                <p>Some content in menu 5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="r_purple text-white float-right btn" data-toggle="modal" data-target="#exampleModal">Create new project</button>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
